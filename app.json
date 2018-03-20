@@ -1,34 +1,44 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/explore/explore",
-    "pages/destination/destination",
-    "pages/waypoint/waypoint",
-    "pages/user/user",
-    "pages/trip/trip"
+    "pages/personal/personal",
+    "pages/fitments/fitments",
+    "pages/offers/offers",
+    "pages/personal/personal-experience/personal-experience",
+    "pages/personal/personal-about/personal-about",
+    "pages/personal/personal-special-offer/personal-special-offer"
   ],
   "window": {
-    "backgroundTextStyle": "dark",
-    "navigationBarBackgroundColor": "#4abdcc",
-    "navigationBarTitleText": "kanesir",
-    "navigationBarTextStyle": "white"
+    "navigationBarBackgroundColor": "white",
+    "navigationBarTextStyle": "black"
   },
   "tabBar": {
-    "color": "#b0b0b0",
-    "selectedColor": "#4abdcc",
     "borderStyle": "white",
-    "backgroundColor": "#fff",
-    "list": [{
-      "pagePath": "pages/index/index",
-      "iconPath": "images/index_normal.png",
-      "selectedIconPath": "images/index_pressed.png",
-      "text": "主页"
-    }, {
-      "pagePath": "pages/explore/explore",
-      "iconPath": "images/explore_normal.png",
-      "selectedIconPath": "images/explore_pressed.png",
-      "text": "发现"
-    }]
-  },
-  "debug": true
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/images/post.png",
+        "selectedIconPath": "images/post(1).png"
+      },
+      {
+        "pagePath": "pages/fitments/fitments",
+        "text": "装修图",
+        "iconPath": "/images/fitment.png",
+        "selectedIconPath": "images/fitment(1).png"
+      },
+      {
+        "pagePath": "pages/offers/offers",
+        "text": "预约",
+        "iconPath": "/images/offer.png",
+        "selectedIconPath": "images/offer(1).png"
+      },
+      {
+        "pagePath": "pages/personal/personal",
+        "text": "我的",
+        "iconPath": "/images/personal.png",
+        "selectedIconPath": "images/personal(1).png"
+      }
+    ]
+  }
 }

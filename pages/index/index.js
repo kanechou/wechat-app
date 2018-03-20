@@ -1,64 +1,33 @@
-const App = getApp();
-const api = require('../../utils/api.js');
-const util = require('../../utils/util.js');
-
-const formatTime = util.formatTime;
-
 Page({
   data: {
-    trips: [],
-    start: 0,
-    loading: false,
-    windowWidth: App.systemInfo.windowWidth,
-    windowHeight: App.systemInfo.windowHeight,
+    imgUrls: [
+      "http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg",
+      "http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg",
+      "http://img06.tooopen.com/images/20160818/tooopen_sy_175833047715.jpg"
+    ],
+    indicatorDots: true,
+    autoplay: true,
+    interval: 3000,
+    duration: 1000
   },
-  onLoad() {
-    this.loadMore();
-  },
-  onPullDownRefresh() {
-    this.loadMore(null, true);
-  },
-  loadMore(e, needRefresh) {
-    const self = this;
-    const loading = self.data.loading;
-    const data = {
-      next_start: self.data.start,
-    };
-    if (loading) {
-      return;
-    }
-    self.setData({
-      loading: true,
-    });
-    api.trip.hot(data, (state, res) => {
-      if (state === 'success') {
-        let newList = res.data.data.elements;
-        console.log('data', res.data)
-        newList.map((trip) => {
-          const item = trip;
-          item.data[0].date_added = formatTime(new Date(item.data[0].date_added * 1000), 1);
-          return item;
-        });
-        if (needRefresh) {
-          wx.stopPullDownRefresh();
-        } else {
-          newList = self.data.trips.concat(newList);
-        }
-        self.setData({
-          trips: newList,
-        });
-        const nextStart = res.data.data.next_start;
-        self.setData({
-          start: nextStart,
-          loading: false,
-        });
-      }
+  changeIndicatorDots: function(e) {
+    this.setData({
+      indicatorDots: !this.data.indicatorDots
     });
   },
-  viewTrip(e) {
-    const ds = e.currentTarget.dataset;
-    wx.navigateTo({
-      url: `../trip/trip?id=${ds.id}&name=${ds.name}`,
+  changeAutoplay: function(e) {
+    this.setData({
+      autoplay: !this.data.autoplay
     });
   },
+  intervalChange: function(e) {
+    this.setData({
+      interval: e.detail.value
+    });
+  },
+  durationChange: function(e) {
+    this.setData({
+      duration: e.detail.value
+    });
+  }
 });

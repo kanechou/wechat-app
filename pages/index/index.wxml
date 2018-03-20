@@ -1,10 +1,8 @@
-<import src="../../components/trip/trip.wxml"/>
-
-<scroll-view class="list" style="height: {{ windowHeight }}px; width: {{ windowWidth }}px;" scroll-y="true"  bindscrolltolower="loadMore" lower-threshold="800">
-  <block wx:for="{{ trips }}" wx:for-item="trip">
-    <template is="m-trip" wx:if="{{ trip.type === 4 }}" data="{{trip: trip.data[0], mode: 1}}" />
+<swiper indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{imgUrls}}">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image" width="355" height="150"/>
+    </swiper-item>
   </block>
-  <view class="loading">
-    正在加载...
-  </view>
-</scroll-view>
+</swiper>

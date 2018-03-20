@@ -1,13 +1,13 @@
 {
-  "name": "weapp-demo-breadtrip",
+  "name": "kansir-cms",
   "version": "0.0.1",
-  "description": "微信小程序示例 - 面包旅行",
+  "description": "KanesirCMS",
   "main": "app.js",
   "scripts": {
     "lint": "eslint"
   },
-  "keywords": ["breadtrip", "weapp"],
-  "author": "romoo chen <romoochen@gmail.com>",
+  "keywords": ["kanesir"],
+  "author": "kanesir",
   "license": "Apache-2.0",
   "devDependencies": {
     "eslint": "^3.9.1",

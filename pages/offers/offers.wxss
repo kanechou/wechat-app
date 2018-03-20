@@ -1,0 +1,81 @@
+/* pages/offers/offers.wxss */
+
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    background-color: #fff;
+}
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.offers-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.offers-container image {
+  width: 100%;
+  height: 300rpx;
+}
+
+.user-container {
+  display: flex;
+  flex-direction: row;
+  border: 1rpx solid #d1d1d1;
+  height: 42px;
+}
+
+.offers-title {
+  font-size: 14px;
+  margin: auto 0 auto 20rpx;
+  width: 200rpx;
+}
+
+.user-container input {
+  height: 100%;
+  width: 600rpx;
+  margin-left: 20rpx;
+  /*font-family: Microsoft YaHei;*/
+}
+
+.placeholder {
+  font-size: 14px;
+  /*font-family: Microsoft YaHei;*/
+  color: #d1d1d1;
+  margin-left: 0rpx;
+}
+
+.btn-area {
+  padding: 15px;
+  margin-top: 10px;
+}
+
+.btn-area .application {
+  margin-top: 15px;
+}
+
+.stateContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 10px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  background-color: #fff;
+  margin-top: 10px;
+}
+
+.stateTitle {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 19px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+
+}

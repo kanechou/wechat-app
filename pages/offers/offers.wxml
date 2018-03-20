@@ -1,0 +1,31 @@
+<view class="container"> 
+  <view class="wrapper">
+    <form class="offers-container" bindsubmit="formSubmit"  bindreset="formReset">
+    <image src="/images/4.jpg"></image>
+      <view class="user-container">
+        <text class="offers-title">您的姓名</text>
+        <input type="text" name="username" placeholder="姓名" placeholder-class="placeholder" bindfocus="onBindFocus" />
+      </view>
+      <view class="user-container">
+        <text class="offers-title">您的手机号</text>
+        <input type="number" name="telephone" placeholder="请输入手机号码" placeholder-class="placeholder" bindfocus="onBindFocus" />
+      </view>
+      <view class="user-container">
+        <text class="offers-title">房屋面积</text>
+        <input type="number" name="floorSpace" placeholder="房屋面积㎡" placeholder-class="placeholder" bindfocus="onBindFocus" />
+      </view>
+      <view class="user-container">
+        <text class="offers-title">房屋面积</text>
+        <input type="number" name="floorSpace" placeholder="房屋面积㎡" placeholder-class="placeholder" bindfocus="onBindFocus" />
+      </view>
+      <view class="btn-area">
+        <button formType="submit" type="primary">立即申请</button>
+        <button class="application" formType="reset">重置</button>
+      </view> 
+    </form>
+  </view>
+  <view class="stateContainer">
+    <text class="stateTitle">申请之后</text>
+      <text>我们将电话联系您的装修需求，将为您提供离您最近最快的免费设计方案，沟通时间将以短信形式发送到您的手机</text>
+  </view>
+</view>

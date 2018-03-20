@@ -1,0 +1,13 @@
+<block wx:for="{{experience_key}}">
+<view class="experience-container" catchtap="onExperienceTap">
+  <image src="{{item.imgExp}}"></image>
+  <view class="experience-content">
+    <text class="title">{{item.oupExp}}</text>
+    <text class="address">{{item.addExp}}</text>
+    <text class="phone">{{item.phoExp}}</text>
+    <text class="hot-title">立即预约享受线上优惠</text>
+    
+  </view>
+  <image class="icon-more" src="/images/arrow-right.png"></image>
+</view>
+</block>

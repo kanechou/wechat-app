@@ -1,0 +1,23 @@
+
+<!--pages/personal/personal.wxml-->
+<view class="personal-container">
+  <view class="head-container" style=" width:750rpx;height:300rpx;background-image:url(/images/2.jpg);background-size:100% 100%">
+    <view>
+      <image src="/images/4.jpg"></image>
+    </view>
+    <view>
+      <text>你的名字</text>
+      <text>绑定手机号</text>
+    </view>
+  </view>
+
+  <block wx:for="{{post_key}}">
+  <view class="content-container" catchtap="onIntroduceTap" data-pages="{{item.pageprop}}">
+    <view class="introduce">
+      <image src="{{item.imgSrc}}"></image>
+      <text>{{item.title}}</text>
+    </view>
+    <image src="/images/arrow-right.png"></image>
+  </view>
+  </block>
+</view>
